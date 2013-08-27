@@ -1,0 +1,28 @@
+/* ========================================================
+    PurePenny Header Styles
+=========================================================== */
+
+@import "../inc/colors";
+
+.module-header {
+	display: table;
+	position: relative;
+	height: 60px;
+	overflow: hidden;
+
+	.wedge-user-options {
+		display: table-cell;
+		vertical-align: middle;
+		width: 100%;
+		margin: 0 auto;
+		
+		.chunk-messages {
+			color: @pp-blue;
+			font-weight: bold;
+
+			span {
+				vertical-align: middle;
+			}
+		}
+	}
+}

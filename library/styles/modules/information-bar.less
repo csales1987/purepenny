@@ -1,0 +1,52 @@
+/* ========================================================
+    Information Bar Styles
+=========================================================== */
+@import "../inc/colors";
+
+.module-information-bar {
+	background-color: @pp-blue;
+	color: @pp-white;
+
+	.wedge-text, .wedge-navigation, .wedge-cart {
+		display: table;
+		position: relative;
+		height: 60px;
+		overflow: hidden;
+		
+		.text-wrapper {
+			display: table-cell;
+			vertical-align: middle;
+			width: 100%;
+			margin: 0 auto;
+			text-align: center;
+
+			span {
+				display: block;
+
+				&.bold { font-weight: bold;	}
+			}
+		}
+	}
+	.wedge-navigation {
+		nav {
+			padding-left: 10px;
+			background: no-repeat transparent url("../../images/down-arrow.png");
+			min-height: 23px;
+		}
+	}
+
+	.wedge-cart {
+		.text-wrapper {
+			span {
+				display: inline;
+				vertical-align: middle;
+				
+				&.cart-items {
+					position: absolute;
+					bottom: 5px;
+					font-weight: bold;
+				}
+			}
+		}
+	}
+}

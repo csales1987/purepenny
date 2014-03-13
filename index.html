@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
@@ -14,11 +15,13 @@
         <link rel="stylesheet/less" href="library/styles/purepenny.less">
         <link rel="stylesheet/less" href="library/styles/type.less">
         <link rel="stylesheet/less" href="library/styles/links.less">
+        <link rel="stylesheet/less" href="library/styles/shadows.less">
         <link rel="stylesheet/less" href="library/styles/modules/information-bar.less">
         <link rel="stylesheet/less" href="library/styles/modules/header.less">
+        <link rel="stylesheet/less" href="library/styles/modules/cards.less">
 
         <script src="library/scripts/lib/less-1.4.1.min.js"></script>
-        <script src="library/scripts/lib/modernizr-respond.min.js"></script>
+        <script src="library/scripts/lib/modernizr-2.6.2.min.js"></script>
     </head>
     <body>
         <div class="container">
@@ -26,24 +29,31 @@
             <!-- Header Placeholder-->
                 <section class="module-header">
                 
-                    <div class="wedge-logo twelve columns">
+                    <div class="wedge-logo">
                         <img src="library/images/logo.png" alt="PurePenny Logo">
                     </div>
                     <div class="wedge-user-options">
-                        <div class="chunk-messages two columns">
+                        <div class="chunk-messages columns">
                             <a href="#messages">
                                 <span class="bold">5</span>
                                 <img src="library/images/messages.png" alt="Messages">
                             </a> 
                         </div>
-                        <div class="chunk-user-profile five columns">
-                            <span>trogladitejim234</span>
-                        </div>
-                        <div class="chunk-atm four columns offset-by-one">
-                            <div class="deposit-tab">
+                        <a href="#user-profile">
+                            <div class="chunk-user-profile columns offset-by-one">
+                                <div class="user-profile-wrapper">
+                                    <span>trogladitejim234</span>
+                                </div>
+                                <div class="avatar-wrapper columns">
+                                    <img src="library/images/avatar.png" alt="Avatar">
+                                </div>
+                            </div>
+                        </a>
+                        <div class="chunk-atm four align-right">
+                            <div class="atm-tab deposit">
                                 <a href="#deposit" class="deposit-link"><span>Deposit Money</span></a>
                             </div>
-                            <div class="withdraw-tab">
+                            <div class="atm-tab withdraw">
                                 <a href="#withdraw" class="withdraw-link"><span>Withdraw Cash</span></a>
                             </div>
                         </div>
@@ -55,8 +65,8 @@
         </div>
         <div class="container">
             <div class="row">
-            <!-- Content Placeholder-->
-                <section class="module-information-bar twentyfour columns x3-top">
+            <!-- Information Bar Placeholder-->
+                <section class="module-information-bar twentyfour columns">
                     <div class="wedge-navigation four columns">
                         <div class="text-wrapper">
                             <nav class="x1-left menu-text">
@@ -82,18 +92,158 @@
                     </div>
                     <div class="wedge-cart four columns offset-by-one">
                         <div class="text-wrapper">
-                            <span class="menu-text yellow-text x1-right">Cart</span>
+                            <span class="menu-text yellow-text">Cart</span>
                             <a href="#shopping-cart"><img src="library/images/shopping-cart.png" alt="Shopping Cart"></a>
                             <span class="cart-items">3</span>
                         </div>
                     </div>
                 </section>
-                <section class="module-auction-cards">
-                    
-                </section>
-            <!-- End of Content Placeholder-->
+            <!-- End of Information Bar Placeholder-->
             </div>
         </div>    
+        <div class="container">
+            <div class="row">
+            <!-- Content Placeholder-->
+                    <section class="module-cards x3-top x3">
+                        <div id="card-1" class="wedge-card drop-shadow lifted-corners">
+                            <div class="chunk-card">
+                                <h1>$10 Cash</h1>
+                                <h2>Use to bid or Take Home</h2>
+                                <div class="card-image">
+                                    <img src="library/images/cash-10.png" alt="$10 Cash">
+                                </div>
+                                <div class="auction-price">
+                                    <span>$0.37</span>
+                                </div>
+                                <div class="regular-price">
+                                    <span>msrp $10</span>
+                                </div>
+                                <div class="auction-timer">
+                                    <span></span>
+                                </div>
+                                <div class="bidder-name">
+                                    <span>I-was-last-bidder</span>
+                                </div>
+                                <div class="bid-button-wrapper">
+                                    <div class="card-description">
+                                        <a href="#description"><img src="library/images/gripper.png" alt="Descriptions"></a>
+                                    </div>
+                                    <button class="bid"><span>BID</span></button>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="card-2" class="wedge-card drop-shadow lifted-corners">
+                            <div class="chunk-card">
+                                <h1>Share Today</h1>
+                                <h2>Use to bid or Take Home</h2>
+                                <div class="card-image">
+                                    <img src="library/images/dollar-sign.png" alt="$10 Cash">
+                                </div>
+                                <div class="auction-price">
+                                    <span>$19.56</span>
+                                </div>
+                                <div class="regular-price">
+                                    <span>No Limit</span>
+                                </div>
+                                <div class="auction-timer">
+                                    <span></span>
+                                </div>
+                                <div class="bidder-name">
+                                    <span>I-was-last-bidder</span>
+                                </div>
+                                <div class="bid-button-wrapper">
+                                    <div class="card-description">
+                                        <a href="#description"><img src="library/images/gripper.png" alt="Descriptions"></a>
+                                    </div>
+                                    <button class="me" disabled="disabled"><span>me</span></button>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="card-3" class="wedge-card drop-shadow lifted-corners">
+                            <div class="chunk-card">
+                                <h1>Double Bids</h1>
+                                <h2>Use to bid or Take Home</h2>
+                                <div class="card-image">
+                                    <img src="library/images/bids.png" alt="$10 Cash">
+                                </div>
+                                <div class="auction-price">
+                                    <span>$1.31</span>
+                                </div>
+                                <div class="regular-price">
+                                    <span>No Limit</span>
+                                </div>
+                                <div class="auction-timer">
+                                    <span></span>
+                                </div>
+                                <div class="bidder-name">
+                                    <span>I-was-last-bidder</span>
+                                </div>
+                                <div class="bid-button-wrapper">
+                                    <div class="card-description">
+                                        <a href="#description"><img src="library/images/gripper.png" alt="Descriptions"></a>
+                                    </div>
+                                    <button class="bid"><span>BID</span></button>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="card-4" class="wedge-card drop-shadow lifted-corners sold">
+                            <div class="chunk-card">
+                                <h1>Magnify Money</h1>
+                                <h2>Use to bid or Take Home</h2>
+                                <div class="card-image">
+                                    <img src="library/images/magnify-money.png" alt="$10 Cash">
+                                </div>
+                                <div class="auction-price">
+                                    <span>$13.67</span>
+                                </div>
+                                <div class="regular-price">
+                                    <span>max $1000</span>
+                                </div>
+                                <div class="auction-timer">
+                                    <span></span>
+                                </div>
+                                <div class="bidder-name">
+                                    <span>I-was-last-bidder</span>
+                                </div>
+                                <div class="bid-button-wrapper">
+                                    <div class="card-description">
+                                        <a href="#description"><img src="library/images/gripper.png" alt="Descriptions"></a>
+                                    </div>
+                                    <button disabled><span>SOLD</span></button>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="card-5" class="wedge-card drop-shadow lifted-corners">
+                            <div class="chunk-card">
+                                <h1>Freebie Wild Card</h1>
+                                <h2>Use to bid or Take Home</h2>
+                                <div class="card-image">
+                                    <img src="library/images/freebie.png" alt="$10 Cash">
+                                </div>
+                                <div class="auction-price">
+                                    <span>$0.00</span>
+                                </div>
+                                <div class="regular-price">
+                                    <span>max $100.00</span>
+                                </div>
+                                <div class="auction-timer">
+                                    <span></span>
+                                </div>
+                                <div class="bidder-name">
+                                    <span>I-was-last-bidder</span>
+                                </div>
+                                <div class="bid-button-wrapper">
+                                    <div class="card-description">
+                                        <a href="#description"><img src="library/images/gripper.png" alt="Descriptions"></a>
+                                    </div>
+                                    <button class="bid"><span>BID</span></button>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+            <!-- End of Content Placeholder-->
+            </div>
+        </div> 
         <div class="container">
             <div class="row">
             <!-- Foooter Placeholder-->
@@ -105,10 +255,22 @@
         </div> 
 
         <script src="library/scripts/lib/jquery-1.10.1.min.js"></script>
+        <script src="library/scripts/lib/response.min.js"></script>
             <!--[if (gte IE 6)&(lte IE 8)]>
                 <script type="text/javascript" src="selectivizr-min.js"></script>
             <![endif]-->
         <script src="library/scripts/lib/json3.min.js"></script>
-        <script src="library/scripts/main.js"></script>
+        <script src="library/scripts/lib/require-2.1.8.js"></script>
+        <script src="library/scripts/lib/fuse.js"></script>
+        <script src="library/scripts/purepenny.js"></script>
+        <script>
+        $(function () {
+            purepenny.app.start(purepenny.app.create('cards', { id: 'card-1', expireSeconds: 10 }));
+            purepenny.app.start(purepenny.app.create('cards', { id: 'card-2', expireSeconds: 30 }));
+            purepenny.app.start(purepenny.app.create('cards', { id: 'card-3', expireSeconds: 60 }));
+            purepenny.app.start(purepenny.app.create('cards', { id: 'card-4', expireSeconds: 90 }));
+            purepenny.app.start(purepenny.app.create('cards', { id: 'card-5', expireSeconds: 120 }));
+        });
+        </script>
     </body>
 </html>

@@ -1,0 +1,176 @@
+/* ========================================================
+    PurePenny Card Styles
+=========================================================== */
+
+@import "../inc/colors";
+@import "../inc/css3";
+
+.module-cards {
+	.wedge-card {
+		margin: 7px;
+		float: left;
+		width: 175px;
+		height: 280px;
+		background: @pp-card-white;
+		border: @pp-gray 1px solid;
+		.border-radius(5px);
+		
+		.chunk-card {
+			margin: 10px 0;
+			h1, h2 { text-align: center }
+			h1 {
+				font-size: 16px;
+				font-weight: bold;
+				line-height: 20px;
+			}
+			h2 {
+				font-size: 12px;
+				font-weight: bold;
+			}
+			.card-image {
+				min-width: 175px;
+				min-height: 100px;
+				margin: 0 auto;
+				img {
+					width: inherit;
+				}
+			}
+			.auction-price {
+				margin-bottom: 10px;
+				float: left;
+				width: 80px;
+				.border-radius(0 25px 25px 0);
+				.box-shadow(0px 1px 5px #555555);
+				height: 25px;
+				line-height: 24px;
+				background-color: @pp-gray;
+				span {
+					padding: 0 10px 0 10px;
+					text-align: right;
+					float: right;
+				}
+			}
+			.regular-price {
+				float: left;
+				width: 80px;
+				line-height: 24px;
+				overflow: hidden;
+				span {
+					text-align: center;
+					float: right;
+					font-size: 12px;
+				}
+			}
+			.auction-timer {
+				float: left;
+				width: 115px;
+				.border-radius(0 25px 25px 0);
+				.box-shadow(0px 1px 5px #555555);
+				height: 30px;
+				line-height: 30px;
+				background-color: @pp-gray;
+
+
+				span {
+					padding: 0 10px 0 10px;
+					text-align: right;
+					float: right;
+					font-size: 22px;
+				}
+				&.under-minute {
+					span { font-weight: bold; }
+				}
+				&.expiring { 
+					background-color: @pp-red; 
+					span { color: @pp-white;}
+				}
+			}
+			.bidder-name {
+				float: left;
+				width: 100%;
+				margin: 5px 0;
+				line-height: 16px;
+				overflow: hidden;
+				span {
+					padding: 0 10px 0 10px;
+					text-align: right;
+					float: right;
+					font-size: 12px;
+				}
+			}
+			.bid-button-wrapper {
+				position: absolute;
+				bottom: 3px;
+				left: 5px;
+				float: left;
+				
+				.bid-button, .card-description {
+					float: left;
+				}
+
+				button {
+					margin-left: 10px;
+					width: 115px;
+					height: 35px;
+					border: none;
+					padding-top: -5px;
+					.border-radius(10px);
+					.box-shadow(inset 0px 0px 1px 1px #777);
+
+					span {
+						color: @pp-white;
+						font-size: 24px;
+						font-weight: bold;
+						line-height: 32px;
+					}
+
+					&:active {
+						span { .text-shadow(-1px 1px #555); }
+						.box-shadow(inset 0px 0px 3px 3px #555);
+					}
+
+					&.bid {
+						.background-linear-gradient(@pp-blue, @pp-blue-alt);
+						&:active {
+							.background-linear-gradient(@pp-blue-alt, @pp-blue);
+						}
+					}
+					&.me {
+						span {
+							color: @pp-me-text;
+						}
+						.background-linear-gradient(@pp-yellow, @pp-yellow-alt);
+						&:active {
+							.background-linear-gradient(@pp-yellow-alt, @pp-yellow);
+						}
+					}
+
+					&:disabled {
+						&:active {
+							span {
+								.text-shadow(none);
+							}
+							.box-shadow(inset 0px 0px 1px 1px #777);
+						}
+					}
+				}
+			}
+		}
+
+		&.sold {
+			.auction-timer {
+				background-color: @pp-purple;
+				span { 
+					color: @pp-white; 
+					font-weight: bold;
+				}
+			}
+			button {
+				.background-linear-gradient(@pp-purple, @pp-purple-alt);
+				&:active {
+					.background-linear-gradient(@pp-purple-alt, @pp-purple);
+				}
+			}
+		}
+	}
+}

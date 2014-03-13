@@ -2,10 +2,13 @@
     Information Bar Styles
 =========================================================== */
 @import "../inc/colors";
+@import "../inc/css3";
 
 .module-information-bar {
 	background-color: @pp-blue;
 	color: @pp-white;
+	width: 100%;
+	.box-shadow(0px 7px 5px #555555);
 
 	.wedge-text, .wedge-navigation, .wedge-cart {
 		display: table;
@@ -22,6 +25,7 @@
 
 			span {
 				display: block;
+				.text-shadow(1px 1px #000);
 
 				&.bold { font-weight: bold;	}
 			}
@@ -32,6 +36,8 @@
 			padding-left: 10px;
 			background: no-repeat transparent url("../../images/down-arrow.png");
 			min-height: 23px;
+
+			.yellow-text { .text-shadow(1px 2px #000);}
 		}
 	}
 
@@ -40,7 +46,7 @@
 			span {
 				display: inline;
 				vertical-align: middle;
-				
+				&.menu-text { padding-right: 5px; }
 				&.cart-items {
 					position: absolute;
 					bottom: 5px;

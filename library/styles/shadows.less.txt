@@ -1,0 +1,56 @@
+/* =============================================================================
+	Shadows
+
+	 Table of Contents:
+	 	- LESS Variables
+		- Lifted Corners
+		- Section Content Bottom Shadow
+		- IE Fixes
+============================================================================== */
+
+@import "inc/css3";
+
+/* ========================================================
+	LESS Variables
+=========================================================== */
+
+@padding: 40px;
+
+/* ========================================================
+	Lifted Corners
+=========================================================== */
+@media only screen and (min-width: 766px) {
+.csstransforms {
+
+.drop-shadow {
+    position:relative;
+    .box-shadow(0px 2px 5px #777); 
+}
+
+.drop-shadow:before,
+.drop-shadow:after {
+    content:"";
+    position:absolute; 
+    z-index:-2;
+}
+
+/* Lifted corners */
+
+.lifted-corners:before,
+.lifted-corners:after { 
+    bottom:15px;
+    left:10px;
+    width:50%;
+    height:5%;
+    max-width:300px;
+    .rotate(-12deg);
+    .box-shadow(0px 15px 10px #777); 
+}
+
+.lifted-corners:after {
+    right:10px; 
+    left:auto;
+    .rotate(12deg);
+}
+}
+}
